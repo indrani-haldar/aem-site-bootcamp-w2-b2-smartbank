@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/smartbank/clientlibs"/>
+    <filter root="/apps/smartbank/components"/>
+    <filter root="/apps/smartbank/i18n"/>
+    <filter root="/oak:index/diff.index"/>
+</workspaceFilter>

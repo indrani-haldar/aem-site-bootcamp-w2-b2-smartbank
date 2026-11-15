@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/smartbank" mode="merge"/>
+    <filter root="/content/smartbank" mode="merge"/>
+    <filter root="/content/dam/smartbank" mode="merge">
+        <exclude pattern="/content/dam/smartbank(/.*)?"/>
+        <include pattern="/content/dam/smartbank/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/smartbank/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/smartbank" mode="merge"/>
+</workspaceFilter>
