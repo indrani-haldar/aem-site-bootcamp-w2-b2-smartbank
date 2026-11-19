@@ -1,9 +1,26 @@
-.cmp-navigation {}
-.cmp-navigation__group {}
-.cmp-navigation__item {}
-.cmp-navigation__item--active {}
-// .cmp-navigation__item--level-0 {}
-.cmp-navigation__item--level-0:hover > .cmp-navigation__group {
-  background: #ECECEC;
+.cmp-navigation__group {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
-.cmp-navigation__item-link {}
+
+.cmp-navigation__item {
+    position: relative;
+}
+
+.cmp-navigation__item-link {
+    color: var(--color-ink);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cmp-navigation__item--active > .cmp-navigation__item-link,
+.cmp-navigation__item-link:hover {
+    color:  var(--color-link) ;
+}
+
+.cmp-navigation__item--level-0:hover > .cmp-navigation__group {
+    background: var(--color-surface);
+}

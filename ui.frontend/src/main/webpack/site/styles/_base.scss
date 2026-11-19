@@ -1,0 +1,35 @@
+:root {
+    --color-ink: #{$color-foreground};
+    --color-page: #{$color-background};
+    --color-surface: #{$color-surface};
+    --color-primary: #{$color-primary};
+    --color-primary-hover: #{$color-primary-dark};
+    --color-link: #{$color-link};
+    --color-border: #{$color-border};
+    --color-muted: #{$color-muted};
+    --button-contained-background: #{$button-contained-background};
+    --button-contained-hover-background: #{$button-contained-hover-background};
+    --button-contained-foreground: #{$button-contained-foreground};
+    --button-outlined-background: #{$button-outlined-background};
+    --button-outlined-hover-background: #{$button-outlined-hover-background};
+    --button-outlined-border: #{$button-outlined-border};
+    --button-outlined-foreground: #{$button-outlined-foreground};
+    --button-border-radius: #{$button-border-radius};
+    --button-padding-inline: #{$button-padding-inline};
+    --button-line-height: #{$button-line-height};
+    --button-padding-block: #{$button-padding-block};
+    --font-body: #{$font-family};
+    --text-small: #{$text-small};
+    --text-base: #{$text-base};
+    --text-large: #{$text-large};
+    --space-1: #{$space-1};
+    --space-2: #{$space-2};
+    --space-3: #{$space-3};
+    --space-4: #{$space-4};
+    --space-6: #{$space-6};
+    --space-8: #{$space-8};
+    --radius-card: #{$radius-card};
+    --radius-control: #{$radius-control};
+    --shadow-card: #{$shadow-card};
+    --content-width: #{$content-width};
+}

@@ -1,6 +1,17 @@
 
-//== Container main content style, used on page template
-
 main.container {
-    padding: .5em 1em;
+    width: min(calc(100% - 3rem), var(--content-width));
+    margin: 0 auto;
+    padding: 2.5rem 0 4rem;
+
+    > .cmp-container {
+        min-width: 0;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    main.container {
+        width: calc(100% - 2rem);
+        padding: 1.5rem 0 3rem;
+    }
 }

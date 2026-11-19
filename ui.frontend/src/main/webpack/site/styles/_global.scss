@@ -1,0 +1,88 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $font-size;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    color: var(--color-ink);
+    background: var(--color-page);
+    font-family: $font-family;
+    line-height: $font-height;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--color-primary);
+    text-underline-offset: 0.18em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font: inherit;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+:focus-visible {
+    outline: 3px solid rgba(7, 86, 165, 0.45);
+    outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 0.75em;
+    color: var(--color-ink);
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+th {
+    background: #edf3f8;
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
