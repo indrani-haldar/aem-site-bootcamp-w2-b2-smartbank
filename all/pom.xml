@@ -51,6 +51,9 @@
                 <configuration>
                     <group>com.smartbank</group>
                     <packageType>container</packageType>
+                    <excludes>
+                        <exclude>META-INF/MANIFEST.MF</exclude>
+                    </excludes>
                     <!-- skip sub package validation for now as some vendor packages like CIF apps will not pass -->
                     <skipSubPackageValidation>true</skipSubPackageValidation>
                     <embeddeds>
