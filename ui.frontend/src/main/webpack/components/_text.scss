@@ -1,2 +1,13 @@
-.cmp-text {}
-.cmp-text__paragraph {}
+.cmp-text {
+    color: var(--color-ink);
+    overflow-wrap: anywhere;
+}
+
+.cmp-text__paragraph {
+    margin-bottom: 1rem;
+}
+
+.cmp-text ul,
+.cmp-text ol {
+    padding-left: 1.5rem;
+}

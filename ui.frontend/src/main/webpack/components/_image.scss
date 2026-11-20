@@ -1,4 +1,18 @@
-.cmp-image {}
-.cmp-image__link {}
-.cmp-image__image {}
-.cmp-image__title {}
+.cmp-image {
+    margin: 0;
+}
+
+.cmp-image__link {
+    display: block;
+}
+
+.cmp-image__image {
+    display: block;
+    height: auto;
+}
+
+.cmp-image__title {
+    margin-top: 0.5rem;
+    color: var(--color-muted);
+    font-size: 0.8125rem;
+}

@@ -1,3 +1,15 @@
-.cmp-title {}
-.cmp-title__text {}
-.cmp-title__link {}
+.cmp-title {
+    margin-bottom: 1.25rem;
+}
+
+.cmp-title__text {
+    margin: 0;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+}
+
+.cmp-title__link {
+    color: inherit;
+    text-decoration: none;
+}

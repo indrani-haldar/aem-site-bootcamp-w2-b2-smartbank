@@ -1,16 +1,25 @@
 
-//== XF Footer style, used on page template
-
 footer.experiencefragment {
-    padding: .5em 1em;
-    border-top: 1px solid $color-foreground;
-
-    @media (prefers-color-scheme: dark) {
-        border-color: $color-foreground-dark;
-    }
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface);
 
     .cmp-separator__horizontal-rule {
         margin: 0;
         border: 0;
+    }
+
+    .cmp-container {
+        width: min(100%, var(--content-width));
+        margin: 0 auto;
+    }
+
+    .cmp-text {
+        color: var(--color-muted);
+        font-size: 0.875rem;
+    }
+
+    p {
+        margin: 0;
     }
 }
