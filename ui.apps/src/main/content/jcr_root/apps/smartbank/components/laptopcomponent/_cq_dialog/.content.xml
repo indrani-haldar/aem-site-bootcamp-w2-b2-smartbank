@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 
+xmlns:cq="http://www.day.com/jcr/cq/1.0" 
+xmlns:jcr="http://www.jcp.org/jcr/1.0" 
+xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Laptop Details"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                   
+                   
+                   <laptopImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        fieldLabel="Laptop Image"
+                        fileReferenceParameter="./laptopImageReference"
+                        mimeTypes="[image/png,image/jpg,image/jpeg]"
+                        name="./laptopImage">
+                     </laptopImage>
+                     
+                     
+                    <laptopname
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Laptop Name"
+                        name="./laptopName">
+                        
+                   </laptopname>
+                   
+                      <laptopDescription
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="Laptop Description"
+                        name="./laptopDescription">
+                     </laptopDescription>
+                     
+                     <laptopCondition
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+    fieldLabel="Laptop Condition"
+    name="./laptopCondition"
+    required="{Boolean}true">
+
+    <items jcr:primaryType="nt:unstructured">
+
+        <newLaptop
+            jcr:primaryType="nt:unstructured"
+            text="New Laptop"
+            value="new"/>
+
+        <usedLaptop
+            jcr:primaryType="nt:unstructured"
+            text="Used Laptop"
+            value="used"/>
+
+    </items>
+</laptopCondition>
+
+<laptopCondition1
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+    fieldLabel="Laptop Condition"
+    text="New Laptop"
+    name="./isNewLaptop"
+    value="true"
+    uncheckedValue="false"/>
+
+                       <laptopColor
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+    fieldLabel="Laptop Color"
+    name="./laptopColor"/>
+    
+    
+    <laptopCondition123
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/form/nestedcheckboxlist"
+    fieldLabel="Laptop Condition"
+    name="./laptopCondition">
+
+    <items jcr:primaryType="nt:unstructured">
+
+        <newLaptop
+            jcr:primaryType="nt:unstructured"
+            text="New Laptop"
+            value="new"/>
+
+        <usedLaptop
+            jcr:primaryType="nt:unstructured"
+            text="Used Laptop"
+            value="used"/>
+
+    </items>
+
+</laptopCondition123>
+                       
+                        
+                        
+                        
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

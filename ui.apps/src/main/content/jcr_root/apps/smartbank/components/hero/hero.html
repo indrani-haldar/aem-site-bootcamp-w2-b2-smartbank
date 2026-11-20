@@ -1,0 +1,10 @@
+<div class="cmp-hero" data-sly-use.hero="com.smartbank.core.models.HeroModel">
+    <div class="cmp-hero__image" data-sly-test="${hero.fileReference}">
+        <img class="cmp-hero__img" src="${hero.fileReference}" alt="${hero.title}"/>
+    </div>
+    <div class="cmp-hero__content">
+        <h1 class="cmp-hero__title" data-sly-test="${hero.title}">${hero.title}</h1>
+        <p class="cmp-hero__description" data-sly-test="${hero.description}">${hero.description}</p>
+        <a class="cmp-hero__cta" data-sly-test="${hero.ctaText}" href="${hero.ctaLink}">${hero.ctaText}</a>
+    </div>
+</div>
