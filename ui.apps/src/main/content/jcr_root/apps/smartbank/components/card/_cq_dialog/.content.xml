@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root 
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    jcr:title="Cosmetics Details">
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+             <items jcr:primaryType="nt:unstructured">
+             
+             <tabs 
+                 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                 
+                 <items jcr:primaryType="nt:unstructured">
+                 
+                 <basic 
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/container"
+                      jcr:title="Basic">
+                      
+                 <items jcr:primaryType="nt:unstructured">
+                 
+                 
+                 <cosmeticName 
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                       fieldLabel="Cosmetics Name"
+                       name="./cosmeticsName">    
+                </cosmeticName>
+                 
+                 <cosmeticDescription 
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                       fieldLabel="Cosmetics Description"
+                       name="./cosmeticsDescription">    
+                </cosmeticDescription>
+                
+                
+                <cosmeticsImage 
+                
+                     jcr:primaryType="nt:unstructured"
+                     sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                     fieldLabel="Cosmetics Image"
+                     mimeTypes="[image/png,image/jpg,image/jpeg]"
+                     fileReferenceParameter="./cosmeticsImageReference"
+                     name="./cosmeticsImage">
+                     
+                </cosmeticsImage>
+                
+                <cosmeticBrand
+                      
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldLabel="Cosmetics Brand"
+                      name="./cosmeticsBrand"> 
+                
+                <items jcr:primaryType="nt:unstructured">
+                
+                     <olay 
+                          jcr:primaryType="nt:unstructured"
+                          value="olay"
+                          text="Olay">
+                     </olay>
+                     
+                     <lakme 
+                          jcr:primaryType="nt:unstructured"
+                          value="lakme"
+                          text="Lakme">
+                     </lakme>
+                     
+                     <nykaa
+                          jcr:primaryType="nt:unstructured"
+                          value="nykaa"
+                          text="Nykaa">
+                     </nykaa>
+                     
+                      
+                     <ponds
+                          jcr:primaryType="nt:unstructured"
+                          value="ponds"
+                          text="Ponds">
+                     </ponds>
+
+                </items>
+                
+                
+                </cosmeticBrand>                     
+                
+                
+                 </items>
+                  
+                 
+                 </basic>
+                 
+                 <advanced
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/container"
+                      jcr:title="Advanced">
+                      
+                 <items jcr:primaryType="nt:unstructured">
+                  
+                  
+                  <cosmeticPrice 
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                       fieldLabel="Cosmetics Price"
+                       name="./cosmeticsPrice"
+                       min="{Double}1000"
+                       max="{Double}50000">
+                     
+                  </cosmeticPrice>
+                  
+                  <cosmeticQuantity 
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                       fieldLabel="Cosmetics Quantity"
+                       min="{Double}1"
+                       max="{Double}1000"
+                       name="./cosmeticsQuantity">
+                     
+                  </cosmeticQuantity>
+                  
+                  <variation 
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                       fieldLabel="Variation Name">
+                       
+                       <field 
+                           jcr:primaryType="nt:unstructured"
+                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                           name="./variationName">
+                          
+                       </field>
+
+                  
+                  </variation> 
+                          
+                 
+                  <discount
+                          jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                          fieldLabel="Cosmetics Discount"
+                          name="./discount"
+                          step="5">
+                  
+                  
+                  </discount>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                 </items>
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 </advanced>
+                 
+                 
+                 </items>
+             
+             
+             </tabs>
+             
+             </items>
+             </content>
+             </jcr:root>
