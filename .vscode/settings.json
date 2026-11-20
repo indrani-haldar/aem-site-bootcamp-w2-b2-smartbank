@@ -2,6 +2,5 @@
     "aemsync.server": "http://localhost:4502",
     "aemsync.user": "admin",
     "aemsync.password": "admin",
-    "aemsync.autopush": true,
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "aemsync.autopush": true
 }    

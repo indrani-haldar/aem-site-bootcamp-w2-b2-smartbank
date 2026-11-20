@@ -1,7 +1,8 @@
+Company Header
 
-<div class="header-wrapper">
-    <a class="header__home"
-       data-sly-test="${properties.homeLabel && properties.homeLink}"
-       href="${properties.homeLink @ context='uri'}">${properties.homeLabel}</a>
-    <h2 class="header__title" data-sly-test="${properties.siteTitle}">${properties.siteTitle}</h2>
+
+<div class="company-header">
+<h2>${properties.siteTitle}</h2>
+<h2>${properties.homeLabel}</h2>
+<h2>${properties.homeLink}</h2>
 </div>
