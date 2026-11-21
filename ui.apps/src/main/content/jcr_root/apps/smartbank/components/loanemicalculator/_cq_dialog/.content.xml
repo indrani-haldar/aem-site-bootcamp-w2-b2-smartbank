@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Loan EMI Calculator"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+
+        <items jcr:primaryType="nt:unstructured">
+
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+
+                <items jcr:primaryType="nt:unstructured">
+
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="EMI Calculator"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+
+                        <items jcr:primaryType="nt:unstructured">
+
+                            <!-- Loan Amount -->
+                            <loanAmount
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldLabel="Default Loan Amount (₹)"
+                                fieldDescription="The initial loan amount shown to customers"
+                                name="./loanAmount"
+                                value="500000"
+                                min="1"
+                                step="1"
+                                required="{Boolean}true"/>
+
+                            <!-- Interest Rate -->
+                            <interestRate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldLabel="Default Interest Rate (% p.a.)"
+                                fieldDescription="The initial annual interest rate shown to customers"
+                                name="./interestRate"
+                                value="8.5"
+                                min="0"
+                                step="0.01"
+                                required="{Boolean}true"/>
+
+                            <!-- Loan Tenure -->
+                            <loanTenure
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldLabel="Default Loan Tenure (Years)"
+                                fieldDescription="The initial tenure shown to customers"
+                                name="./loanTenure"
+                                value="5"
+                                min="1"
+                                step="1"
+                                required="{Boolean}true"/>
+
+                            <!-- Button Text -->
+                          <buttonText
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldLabel="Button Text"
+                              fieldDescription="Defaults to Calculate EMI"
+                              name="./buttonText"
+                              value="Calculate EMI"/>
+
+                        </items>
+
+                    </properties>
+
+                </items>
+            </tabs>
+
+        </items>
+    </content>
+
+</jcr:root>
