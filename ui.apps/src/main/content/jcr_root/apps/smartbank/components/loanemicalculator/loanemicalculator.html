@@ -1,0 +1,60 @@
+<div class="loan-card" data-loan-calculator>
+    <h2 class="loan-card__title">EMI Calculator</h2>
+
+    <form class="loan-card__form" novalidate>
+        <div class="loan-card__details">
+            <div class="loan-card__field">
+                <label class="loan-card__label loan-card__amount-label">Loan Amount (₹)</label>
+                <input
+                    class="loan-card__input loan-amount"
+                    name="loanAmount"
+                    type="number"
+                    value="${properties.loanAmount || '500000'}"
+                    min="1"
+                    step="1"
+                    inputmode="decimal"
+                    placeholder="Enter loan amount"
+                    required>
+            </div>
+
+            <div class="loan-card__field">
+                <label class="loan-card__label loan-card__interest-label">Interest Rate (% p.a.)</label>
+                <input
+                    class="loan-card__input interest-rate"
+                    name="interestRate"
+                    type="number"
+                    value="${properties.interestRate || '8.5'}"
+                    min="0"
+                    step="0.01"
+                    inputmode="decimal"
+                    placeholder="Enter annual interest rate"
+                    required>
+            </div>
+
+            <div class="loan-card__field">
+                <label class="loan-card__label loan-card__tenure-label">Loan Tenure (Years)</label>
+                <input
+                    class="loan-card__input loan-tenure"
+                    name="loanTenure"
+                    type="number"
+                    value="${properties.loanTenure || '5'}"
+                    min="1"
+                    step="1"
+                    inputmode="numeric"
+                    placeholder="Enter tenure in years"
+                    required>
+            </div>
+        </div>
+
+        <button class="loan-card__button calculate-emi" type="submit">
+            ${properties.buttonText || 'Calculate EMI'}
+        </button>
+    </form>
+
+    <div class="loan-card__error" role="alert" aria-live="polite"></div>
+
+    <div class="loan-card__result" aria-live="polite">
+        <span class="loan-card__result-label">Monthly EMI</span>
+        <strong class="loan-card__emi">₹ 0</strong>
+    </div>
+</div>
