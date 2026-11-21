@@ -20,6 +20,18 @@
             <div class="cmp-product-cards__content">
                 <h2 class="cmp-product-cards__title">${product.title}</h2>
                 <p class="cmp-product-cards__description" data-sly-test="${product.description}">${product.description}</p>
+                <dl class="cmp-product-cards__details"
+                    data-sly-test="${product.interestRate || product.annualFee || product.keyBenefit}">
+                    <div class="cmp-product-cards__detail" data-sly-test="${product.interestRate}">
+                        <dd>${product.interestRate}</dd>
+                    </div>
+                    <div class="cmp-product-cards__detail" data-sly-test="${product.annualFee}">
+                        <dd>${product.annualFee}</dd>
+                    </div>
+                    <div class="cmp-product-cards__detail" data-sly-test="${product.keyBenefit}">
+                        <dd>${product.keyBenefit}</dd>
+                    </div>
+                </dl>
                 <a class="cmp-product-cards__link"
                    data-sly-test="${product.buttonLink}"
                    href="${product.buttonLink @ context='uri'}">${product.buttonText || 'Learn More'}</a>

@@ -61,6 +61,32 @@
         line-height: 1.35;
     }
 
+    &__details {
+        display: grid;
+        gap: var(--space-1);
+        margin: 0 0 var(--space-3);
+        color: var(--color-ink);
+        font-size: var(--text-small);
+        line-height: 1.35;
+    }
+
+    &__detail {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0 var(--space-2);
+
+        dt {
+            color: var(--color-muted);
+        }
+
+        dd {
+            margin: 0;
+            font-weight: 600;
+            text-align: right;
+        }
+    }
+
     &__link {
         display: flex;
         min-height: 1.75rem;

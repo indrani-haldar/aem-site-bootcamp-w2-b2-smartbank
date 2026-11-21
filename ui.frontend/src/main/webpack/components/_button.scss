@@ -70,3 +70,8 @@
         }
     }
 }
+.rounded {
+    .cmp-button {
+        border-radius: var(--button-rounded-border-radius);
+    }
+}

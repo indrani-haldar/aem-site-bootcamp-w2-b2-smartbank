@@ -33,6 +33,24 @@
                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                     fieldLabel="Description"
                                     name="description"/>
+                                <interestRate
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Interest Rate"
+                                    fieldDescription="Optional, for example 3.50% p.a."
+                                    name="interestRate"/>
+                                <annualFee
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Annual Fee"
+                                    fieldDescription="Optional, for example ₹0"
+                                    name="annualFee"/>
+                                <keyBenefit
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Key Benefit"
+                                    fieldDescription="Optional, for example High interest"
+                                    name="keyBenefit"/>
                                 <iconPath
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
