@@ -6,6 +6,7 @@
     const formatIndianCurrency = (value) => new Intl.NumberFormat("en-IN", {
         style: "currency",
         currency: "INR",
+        minimumFractionDigits: 0,
         maximumFractionDigits: 0
     }).format(value);
 
@@ -15,6 +16,8 @@
         const interestRate = loanCard.querySelector(".interest-rate");
         const loanTenure = loanCard.querySelector(".loan-tenure");
         const emiResult = loanCard.querySelector(".loan-card__emi");
+        const totalInterestResult = loanCard.querySelector(".loan-card__total-interest");
+        const totalRepaymentResult = loanCard.querySelector(".loan-card__total-repayment");
         const errorMessage = loanCard.querySelector(".loan-card__error");
         const amountLabel = loanCard.querySelector(".loan-card__amount-label");
         const interestLabel = loanCard.querySelector(".loan-card__interest-label");
@@ -25,7 +28,15 @@
             !(interestRate instanceof HTMLInputElement) ||
             !(loanTenure instanceof HTMLInputElement) ||
             !(emiResult instanceof HTMLElement) ||
+            !(totalInterestResult instanceof HTMLElement) ||
+            !(totalRepaymentResult instanceof HTMLElement) ||
             !(errorMessage instanceof HTMLElement)) {
+            if (window.console && typeof window.console.error === "function") {
+                window.console.error(
+                    "Loan calculator could not initialize because required fields are missing.",
+                    loanCard
+                );
+            }
             return;
         }
 
@@ -57,7 +68,9 @@
                 annualInterest < 0 || tenureYears <= 0) {
                 errorMessage.style.display = "block";
                 errorMessage.textContent = "Please enter valid loan details.";
-                emiResult.textContent = "₹ 0";
+                emiResult.textContent = formatIndianCurrency(0);
+                totalInterestResult.textContent = formatIndianCurrency(0);
+                totalRepaymentResult.textContent = formatIndianCurrency(0);
                 return;
             }
 
@@ -75,9 +88,25 @@
                     (compoundFactor - 1);
             }
 
-            if (Number.isFinite(emi)) {
-                emiResult.textContent = formatIndianCurrency(emi);
+            const exactTotalRepayment = emi * numberOfMonths;
+            const exactTotalInterest = Math.max(0, exactTotalRepayment - principal);
+            const roundedEmi = Math.round(emi);
+            const totalInterest = Math.round(exactTotalInterest);
+            const totalRepayment = Math.round(exactTotalRepayment);
+
+            if (!Number.isFinite(roundedEmi) || !Number.isFinite(totalRepayment) ||
+                !Number.isFinite(totalInterest)) {
+                errorMessage.style.display = "block";
+                errorMessage.textContent = "Please enter valid loan details.";
+                emiResult.textContent = formatIndianCurrency(0);
+                totalInterestResult.textContent = formatIndianCurrency(0);
+                totalRepaymentResult.textContent = formatIndianCurrency(0);
+                return;
             }
+
+            emiResult.textContent = formatIndianCurrency(roundedEmi);
+            totalInterestResult.textContent = formatIndianCurrency(totalInterest);
+            totalRepaymentResult.textContent = formatIndianCurrency(totalRepayment);
         });
     };
 
