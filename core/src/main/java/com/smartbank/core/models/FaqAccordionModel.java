@@ -9,8 +9,8 @@ import org.apache.sling.models.annotations.Model;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class FaqAccordionModel extends SmartBankModel {
-    public String getHeading() { return text("heading", "A few things you might be wondering."); }
-    public String getDescription() { return text("description", "Straightforward answers to your everyday banking questions."); }
+    public String getHeading() { return text("heading", "Frequently asked questions"); }
+    public String getDescription() { return text("description", ""); }
     public List<Item> getItems() {
         List<Item> result = new ArrayList<>();
         for (Resource item : children("items")) {

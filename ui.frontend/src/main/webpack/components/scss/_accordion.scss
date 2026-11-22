@@ -1,48 +1,115 @@
-.cmp-accordion__item {
-    margin-bottom: 0.75rem;
-    overflow: hidden;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-control);
-    background: var(--color-surface);
-}
+@use "typography-mixins" as type;
 
-.cmp-accordion__header {
-    margin: 0;
-}
-
-.cmp-accordion__button {
-    display: flex;
+.cmp-accordion--custom {
     width: 100%;
-    min-height: 3.25rem;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.875rem 1rem;
-    border: 0;
-    background: transparent;
-    color: var(--color-ink);
-    cursor: pointer;
-    font-weight: 700;
-    text-align: left;
+    max-width: var(--content-width);
+    margin: 0 auto;
 
-    &:hover {
-        background: #f7f9fb;
+    .cmp-accordion__heading {
+        margin: 0 0 var(--space-3);
+        color: var(--color-ink);
+        @include type.h5;
+    }
+
+    .cmp-accordion__item {
+        margin: 0 0 var(--space-2);
+        overflow: hidden;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-control);
+        background: var(--color-surface);
+    }
+
+    .cmp-accordion__description {
+        margin: 0 0 var(--space-3);
+        color: var(--color-muted);
+        @include type.body2;
+    }
+
+    .cmp-accordion__button {
+        display: flex;
+        width: 100%;
+        min-height: 2.5rem;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-3);
+        padding: var(--space-2) var(--space-3);
+        color: var(--color-ink);
+        cursor: pointer;
+        box-sizing: border-box;
+        @include type.body2;
+        font-weight: 600;
+        list-style: none;
+        transition: background-color 160ms ease, color 160ms ease;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &:hover {
+            background: var(--color-page);
+        }
+
+        &:focus-visible {
+            outline: 3px solid var(--color-link);
+            outline-offset: -3px;
+        }
+    }
+
+    .cmp-accordion__title {
+        min-width: 0;
+    }
+
+    .cmp-accordion__icon {
+        display: flex;
+        width: 0.75rem;
+        height: 0.75rem;
+        flex: 0 0 0.75rem;
+        align-items: center;
+        justify-content: center;
+
+        &::after {
+            width: 0.4rem;
+            height: 0.4rem;
+            border-right: 1.5px solid currentColor;
+            border-bottom: 1.5px solid currentColor;
+            content: "";
+            transform: translateY(-0.1rem) rotate(45deg);
+            transition: transform 160ms ease;
+        }
+    }
+
+    .cmp-accordion__item[open] .cmp-accordion__button {
+        color: var(--color-primary);
+    }
+
+    .cmp-accordion__item[open] .cmp-accordion__icon::after {
+        transform: translateY(0.1rem) rotate(225deg);
+    }
+
+    .cmp-accordion__panel {
+        padding: 0 var(--space-3) var(--space-3);
+        color: var(--color-muted);
+        @include type.body2;
+
+        > :first-child {
+            margin-top: 0;
+        }
+
+        > :last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
-.cmp-accordion__button--expanded {
-    color: var(--color-primary);
-}
+@media (max-width: $breakpoint-mobile) {
+    .cmp-accordion--custom {
+        .cmp-accordion__button {
+            gap: var(--space-2);
+            padding: var(--space-2);
+        }
 
-.cmp-accordion__icon {
-    flex: 0 0 auto;
-}
-
-.cmp-accordion__panel {
-    padding: 0 1rem 1rem;
-    color: var(--color-muted);
-}
-
-.cmp-accordion__panel--hidden {
-    display: none;
+        .cmp-accordion__panel {
+            padding: 0 var(--space-2) var(--space-2);
+        }
+    }
 }
