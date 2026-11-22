@@ -1,5 +1,5 @@
- @use "typography-mixins" as type;
-
+@use "typography-mixins" as type;
+@use "button-mixins" as button;
 
  #sb-footer {
      box-sizing: border-box;
@@ -305,6 +305,7 @@
          gap: 0.75rem;
 
          width: 100%;
+         cursor: pointer;
 
          .image {
              flex: 0 0 auto;

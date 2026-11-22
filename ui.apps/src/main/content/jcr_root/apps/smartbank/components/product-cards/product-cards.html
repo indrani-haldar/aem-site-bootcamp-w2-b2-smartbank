@@ -1,46 +1,43 @@
-<div class="cmp-product-cards"
-     data-sly-test="${resource.children}">
+<div class="cmp-product-cards" data-sly-test="${resource.children}">
     <sly data-sly-list.productGroup="${resource.children}">
         <sly data-sly-test="${productGroup.name == 'products'}">
             <sly data-sly-list.product="${productGroup.children}">
                 <article class="cmp-product-cards__card">
                     <div class="cmp-product-cards__media">
-                        <img class="cmp-product-cards__icon"
-                             data-sly-test="${product.iconPath}"
-                             src="${product.iconPath @ context='uri'}"
-                             alt="${product.iconAlt}"/>
-                        <svg class="cmp-product-cards__placeholder"
-                             data-sly-test="${!product.iconPath}"
-                             aria-hidden="true"
-                             viewBox="0 0 32 28"
-                             focusable="false">
-                            <rect x="1" y="1" width="30" height="26" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                            <circle cx="23" cy="8" r="2" fill="currentColor"/>
-                            <path d="M3 23l8-8 5 5 4-4 9 8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <img class="cmp-product-cards__icon" data-sly-test="${product.iconPath}"
+                            src="${product.iconPath @ context='uri'}" alt="${product.iconAlt}" />
+                        <svg class="cmp-product-cards__placeholder" data-sly-test="${!product.iconPath}"
+                            aria-hidden="true" viewBox="0 0 32 28" focusable="false">
+                            <rect x="1" y="1" width="30" height="26" rx="1" fill="none" stroke="currentColor"
+                                stroke-width="1.5" />
+                            <circle cx="23" cy="8" r="2" fill="currentColor" />
+                            <path d="M3 23l8-8 5 5 4-4 9 8" fill="none" stroke="currentColor" stroke-width="1.5" />
                         </svg>
                     </div>
                     <div class="cmp-product-cards__content">
                         <h2 class="cmp-product-cards__title">${product.title}</h2>
-                        <p class="cmp-product-cards__description"
-                           data-sly-test="${product.description}">${product.description}</p>
+                        <p class="cmp-product-cards__description" data-sly-test="${product.description}">
+                            ${product.description}</p>
                         <dl class="cmp-product-cards__details"
                             data-sly-test="${product.interestRate || product.annualFee || product.keyBenefit}">
-                            <div class="cmp-product-cards__detail"
-                                 data-sly-test="${product.interestRate}">
+                            <div class="cmp-product-cards__detail" data-product-detail="interestRate"
+                                data-sly-test="${product.interestRate}">
                                 <dd>${product.interestRate}</dd>
                             </div>
-                            <div class="cmp-product-cards__detail"
-                                 data-sly-test="${product.annualFee}">
+                            <div class="cmp-product-cards__detail" data-product-detail="annualFee"
+                                data-sly-test="${product.annualFee}">
                                 <dd>${product.annualFee}</dd>
                             </div>
-                            <div class="cmp-product-cards__detail"
-                                 data-sly-test="${product.keyBenefit}">
+                            <div class="cmp-product-cards__detail" data-product-detail="keyBenefit"
+                                data-sly-test="${product.keyBenefit}">
                                 <dd>${product.keyBenefit}</dd>
                             </div>
                         </dl>
-                        <a class="cmp-product-cards__link"
-                           data-sly-test="${product.buttonLink}"
-                           href="${product.buttonLink @ context='uri'}">${product.buttonText || 'Learn More'}</a>
+                        <div class="cmp-product-cards__action" data-sly-test="${product.buttonLink}">
+                            <a class="cmp-product-cards__link" href="${product.buttonLink @ context='uri'}">
+                                ${product.buttonText || 'Learn More'}
+                            </a>
+                        </div>
                     </div>
                 </article>
             </sly>

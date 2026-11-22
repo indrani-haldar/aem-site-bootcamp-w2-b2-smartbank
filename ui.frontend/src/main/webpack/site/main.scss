@@ -3,8 +3,6 @@
 @import './styles/base';
 @import './styles/global';
 @import './styles/fonts';
-@import '../components/**/*.scss';
+@import '../components/scss/**/*.scss';
 @import '../pages/**/*.scss';
 @import './styles/container_main';
-@import './styles/experiencefragment_header';
-@import './styles/experiencefragment_footer';

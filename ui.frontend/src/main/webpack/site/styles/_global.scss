@@ -1,4 +1,4 @@
-@use "../../components/typography-mixins" as type;
+@use "../../components/scss/typography-mixins" as type;
 
 *,
 *::before,
@@ -68,6 +68,7 @@ th {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -79,6 +80,13 @@ th {
 }
 
 
-#section-title{
+#section-title {
     @include type.h5;
+}
+
+#sb-home ,#sb-products , #sb-product-comparison{
+    display: flex;
+    width: 100%;
+    padding: 0 1.25rem;
+    flex-direction: column;
 }
