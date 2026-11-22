@@ -1,3 +1,4 @@
+@use "../../components/typography-mixins" as type;
 
 *,
 *::before,
@@ -7,6 +8,7 @@
 
 html {
     font-size: $text-base;
+    font-family: var(--font-family);
     scroll-behavior: smooth;
 }
 
@@ -15,8 +17,8 @@ body {
     margin: 0;
     color: var(--color-ink);
     background: var(--color-page);
-    font-family: $font-family;
-    line-height: $font-height;
+    font-family: var(--font-family);
+    line-height: var(--font-height);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -42,17 +44,6 @@ video {
 :focus-visible {
     outline: 3px solid rgba(7, 86, 165, 0.45);
     outline-offset: 2px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0 0 0.75em;
-    color: var(--color-ink);
-    line-height: 1.2;
 }
 
 p {
@@ -85,4 +76,9 @@ th {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+}
+
+
+#section-title{
+    @include type.h5;
 }

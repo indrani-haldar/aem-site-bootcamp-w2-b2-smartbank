@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-labelledby="title description">
+    <title id="title">SmartBank home page color theme concept</title>
+    <desc id="description">A polished banking home page concept with navy and blue branding, accessible contrast, a clear hero call to action, and three product cards.</desc>
+    <defs>
+        <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#102B46"/>
+            <stop offset="1" stop-color="#1769AA"/>
+        </linearGradient>
+        <linearGradient id="art" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#5EEAD4"/>
+            <stop offset="1" stop-color="#60A5FA"/>
+        </linearGradient>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+            <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#17324D" flood-opacity=".10"/>
+        </filter>
+        <style>
+            text { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+            .ink { fill: #122B45; }
+            .muted { fill: #597087; }
+            .white { fill: #FFFFFF; }
+            .small { font-size: 14px; }
+        </style>
+    </defs>
+
+    <rect width="1440" height="1080" fill="#F4F8FC"/>
+
+    <g id="header">
+        <rect x="48" y="28" width="1344" height="76" rx="18" fill="#FFFFFF" filter="url(#shadow)"/>
+        <rect x="70" y="46" width="42" height="42" rx="13" fill="#1769AA"/>
+        <path d="M81 68h20M84 62h14M86 56h10M84 74h14" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="122" y="75" class="ink" font-size="24" font-weight="700">SmartBank</text>
+
+        <text x="430" y="75" class="ink" font-size="15" font-weight="700">Home</text>
+        <rect x="424" y="96" width="46" height="3" rx="1.5" fill="#1769AA"/>
+        <text x="520" y="75" class="muted" font-size="15" font-weight="500">Accounts</text>
+        <text x="630" y="75" class="muted" font-size="15" font-weight="500">Cards</text>
+        <text x="710" y="75" class="muted" font-size="15" font-weight="500">Loans</text>
+        <text x="790" y="75" class="muted" font-size="15" font-weight="500">Contact</text>
+
+        <circle cx="1195" cy="66" r="18" fill="#EAF3FB"/>
+        <path d="M1188 66h14M1195 59v14" stroke="#1769AA" stroke-width="2" stroke-linecap="round"/>
+        <text x="1230" y="71" class="muted" font-size="14" font-weight="500">Support</text>
+        <rect x="1310" y="45" width="62" height="42" rx="13" fill="#FFFFFF" stroke="#1769AA" stroke-width="1.5"/>
+        <text x="1341" y="71" text-anchor="middle" fill="#1769AA" font-size="14" font-weight="700">Log in</text>
+    </g>
+
+    <g id="hero">
+        <rect x="48" y="132" width="1344" height="372" rx="26" fill="url(#hero)"/>
+        <circle cx="1190" cy="173" r="190" fill="#FFFFFF" opacity=".045"/>
+        <circle cx="1290" cy="456" r="225" fill="#5EEAD4" opacity=".09"/>
+
+        <rect x="90" y="178" width="223" height="32" rx="16" fill="#FFFFFF" opacity=".13"/>
+        <circle cx="108" cy="194" r="5" fill="#5EEAD4"/>
+        <text x="122" y="199" fill="#D9F6F1" font-size="12" font-weight="700" letter-spacing=".7">BANKING, MADE FOR YOU</text>
+        <text x="90" y="273" class="white" font-size="50" font-weight="700" letter-spacing="-1.3">Banking that moves</text>
+        <text x="90" y="331" class="white" font-size="50" font-weight="700" letter-spacing="-1.3">you forward.</text>
+        <text x="92" y="371" fill="#D6E8F7" font-size="18">Make the most of every day with accounts, cards, and</text>
+        <text x="92" y="398" fill="#D6E8F7" font-size="18">loans designed around your goals.</text>
+
+        <rect x="90" y="428" width="195" height="52" rx="14" fill="#FFFFFF"/>
+        <text x="187" y="461" text-anchor="middle" fill="#123B60" font-size="15" font-weight="700">Explore products</text>
+        <text x="313" y="460" fill="#FFFFFF" font-size="15" font-weight="600">See what’s possible</text>
+        <path d="M473 455h24m-8-8 8 8-8 8" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <g transform="translate(870 169)">
+            <rect x="0" y="38" width="350" height="222" rx="22" fill="#FFFFFF" opacity=".13" transform="rotate(-8 175 149)"/>
+            <rect x="38" y="55" width="392" height="244" rx="24" fill="#FFFFFF" filter="url(#shadow)"/>
+            <rect x="62" y="78" width="44" height="44" rx="14" fill="#EAF3FB"/>
+            <path d="M73 100h22M76 94h16M78 88h12M76 106h16" fill="none" stroke="#1769AA" stroke-width="2" stroke-linecap="round"/>
+            <text x="120" y="98" class="muted" font-size="13" font-weight="600">EVERYDAY ACCOUNT</text>
+            <text x="120" y="119" class="ink" font-size="18" font-weight="700">SmartBank Plus</text>
+            <text x="63" y="172" class="muted" font-size="13">Available balance</text>
+            <text x="62" y="214" class="ink" font-size="34" font-weight="700">₹ 8,42,500</text>
+            <line x1="63" y1="235" x2="402" y2="235" stroke="#E3ECF3"/>
+            <circle cx="78" cy="265" r="10" fill="#DDF7F0"/>
+            <path d="m73 265 4 4 7-8" fill="none" stroke="#07866F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="98" y="270" fill="#278171" font-size="12" font-weight="600">Your money is protected</text>
+        </g>
+        <circle cx="1268" cy="196" r="27" fill="#5EEAD4"/>
+        <path d="M1257 197h22m-8-8 8 8-8 8" fill="none" stroke="#123B60" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="890" cy="442" r="10" fill="#F7C873"/>
+        <circle cx="1215" cy="430" r="7" fill="#5EEAD4"/>
+    </g>
+
+    <g id="products">
+        <text x="72" y="567" class="ink" font-size="30" font-weight="700" letter-spacing="-.5">Find the right fit</text>
+        <text x="72" y="595" class="muted" font-size="16">Simple, flexible products to help you reach your next goal.</text>
+        <text x="1367" y="576" text-anchor="end" fill="#1769AA" font-size="14" font-weight="700">View all products  →</text>
+
+        <g filter="url(#shadow)">
+            <rect x="72" y="625" width="408" height="316" rx="22" fill="#FFFFFF"/>
+            <rect x="504" y="625" width="408" height="316" rx="22" fill="#FFFFFF"/>
+            <rect x="936" y="625" width="408" height="316" rx="22" fill="#FFFFFF"/>
+        </g>
+
+        <g>
+            <rect x="96" y="649" width="60" height="60" rx="18" fill="#E7F7F4"/>
+            <path d="M111 670h30v22h-30zM116 664h20M116 698h20" fill="none" stroke="#07866F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="353" y="663" width="102" height="26" rx="13" fill="#E7F7F4"/>
+            <text x="404" y="681" text-anchor="middle" fill="#07866F" font-size="11" font-weight="700">POPULAR</text>
+            <text x="96" y="751" class="ink" font-size="22" font-weight="700">Savings Account</text>
+            <text x="96" y="781" class="muted" font-size="15">Grow your savings with confidence.</text>
+            <text x="96" y="832" fill="#07866F" font-size="14" font-weight="700">Up to</text>
+            <text x="96" y="869" class="ink" font-size="30" font-weight="700">3.50% p.a.</text>
+            <text x="96" y="897" class="muted" font-size="13">Interest earned annually</text>
+            <rect x="325" y="854" width="131" height="48" rx="13" fill="#1769AA"/>
+            <text x="390" y="883" text-anchor="middle" class="white" font-size="14" font-weight="700">Learn more</text>
+
+            <rect x="528" y="649" width="60" height="60" rx="18" fill="#EAF1FF"/>
+            <rect x="542" y="666" width="33" height="25" rx="5" fill="none" stroke="#4263C7" stroke-width="2"/>
+            <path d="M542 674h33M548 684h8" stroke="#4263C7" stroke-width="2" stroke-linecap="round"/>
+            <rect x="784" y="663" width="104" height="26" rx="13" fill="#EAF1FF"/>
+            <text x="836" y="681" text-anchor="middle" fill="#4263C7" font-size="11" font-weight="700">REWARDS</text>
+            <text x="528" y="751" class="ink" font-size="22" font-weight="700">Travel Credit Card</text>
+            <text x="528" y="781" class="muted" font-size="15">More moments. More rewards.</text>
+            <text x="528" y="832" fill="#4263C7" font-size="14" font-weight="700">Annual fee</text>
+            <text x="528" y="869" class="ink" font-size="30" font-weight="700">₹0</text>
+            <text x="528" y="897" class="muted" font-size="13">For the first year</text>
+            <rect x="757" y="854" width="131" height="48" rx="13" fill="#1769AA"/>
+            <text x="822" y="883" text-anchor="middle" class="white" font-size="14" font-weight="700">Learn more</text>
+
+            <rect x="960" y="649" width="60" height="60" rx="18" fill="#FFF4E2"/>
+            <path d="M972 679 990 665l18 14M976 678v16h28v-16M987 694v-10h8v10" fill="none" stroke="#B26A08" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="1215" y="663" width="104" height="26" rx="13" fill="#FFF4E2"/>
+            <text x="1267" y="681" text-anchor="middle" fill="#A85F00" font-size="11" font-weight="700">HOME LOAN</text>
+            <text x="960" y="751" class="ink" font-size="22" font-weight="700">Personal Loan</text>
+            <text x="960" y="781" class="muted" font-size="15">A little help for your big plans.</text>
+            <text x="960" y="832" fill="#A85F00" font-size="14" font-weight="700">Rates from</text>
+            <text x="960" y="869" class="ink" font-size="30" font-weight="700">10.49% p.a.</text>
+            <text x="960" y="897" class="muted" font-size="13">Flexible repayment options</text>
+            <rect x="1189" y="854" width="131" height="48" rx="13" fill="#1769AA"/>
+            <text x="1254" y="883" text-anchor="middle" class="white" font-size="14" font-weight="700">Learn more</text>
+        </g>
+    </g>
+
+    <g id="trust">
+        <rect x="72" y="974" width="1272" height="72" rx="18" fill="#EAF3FB"/>
+        <circle cx="107" cy="1010" r="18" fill="#DDF7F0"/>
+        <path d="m99 1010 6 6 11-13" fill="none" stroke="#07866F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="140" y="1006" class="ink" font-size="15" font-weight="700">Your security comes first</text>
+        <text x="140" y="1027" class="muted" font-size="13">Protected by 24/7 monitoring and bank-grade security.</text>
+        <line x1="745" y1="990" x2="745" y2="1030" stroke="#C9D9E7"/>
+        <text x="785" y="1006" fill="#1769AA" font-size="15" font-weight="700">Need a hand?</text>
+        <text x="785" y="1027" class="muted" font-size="13">Our support team is here whenever you need us.</text>
+        <text x="1310" y="1015" text-anchor="end" fill="#1769AA" font-size="14" font-weight="700">Get support  →</text>
+    </g>
+</svg>

@@ -1,0 +1,100 @@
+@mixin typography(
+  $size,
+  $line-height,
+  $weight,
+  $letter-spacing: normal
+) {
+  font-family: var(--font-family);
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+
+// Heading shortcuts
+@mixin h1 {
+  @include typography(
+    var(--h1-size),
+    var(--h1-line-height),
+    var(--h1-weight),
+    -0.015625em
+  );
+}
+
+@mixin h2 {
+  @include typography(
+    var(--h2-size),
+    var(--h2-line-height),
+    var(--h2-weight),
+    -0.008333em
+  );
+}
+
+@mixin h3 {
+  @include typography(
+    var(--h3-size),
+    var(--h3-line-height),
+    var(--h3-weight)
+  );
+}
+
+@mixin h4 {
+  @include typography(
+    var(--h4-size),
+    var(--h4-line-height),
+    var(--h4-weight)
+  );
+}
+
+@mixin h5 {
+  @include typography(
+    var(--h5-size),
+    var(--h5-line-height),
+    var(--h5-weight)
+  );
+}
+
+@mixin h6 {
+  @include typography(
+    var(--h6-size),
+    var(--h6-line-height),
+    var(--h6-weight)
+  );
+}
+
+
+// Body
+@mixin body1 {
+  @include typography(
+    var(--body1-size),
+    var(--body1-line-height),
+    var(--font-weight-regular)
+  );
+}
+
+@mixin body2 {
+  @include typography(
+    var(--body2-size),
+    var(--body2-line-height),
+    var(--font-weight-regular)
+  );
+}
+
+
+// Subtitle
+@mixin subtitle1 {
+  @include typography(
+    var(--subtitle1-size),
+    var(--subtitle1-line-height),
+    var(--font-weight-regular)
+  );
+}
+
+@mixin subtitle2 {
+  @include typography(
+    var(--subtitle2-size),
+    var(--subtitle2-line-height),
+    var(--font-weight-medium)
+  );
+}
