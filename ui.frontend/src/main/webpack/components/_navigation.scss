@@ -14,11 +14,7 @@
     color: var(--color-ink);
     text-decoration: none;
     font-weight: bold;
-}
-
-.cmp-navigation__item--active > .cmp-navigation__item-link,
-.cmp-navigation__item-link:hover {
-    color:  var(--color-link) ;
+    cursor: pointer;
 }
 
 .cmp-navigation__item--level-0:hover > .cmp-navigation__group {

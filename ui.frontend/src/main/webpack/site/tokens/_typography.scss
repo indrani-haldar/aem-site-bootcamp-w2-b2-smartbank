@@ -1,6 +1,51 @@
-$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family: "Inter", Arial, sans-serif;
 $font-height: 1.5;
 
-$text-small: 0.875rem;
-$text-base: 1rem;
-$text-large: 1.25rem;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Mobile: 48px | Fluid | Desktop: 96px
+$h1-size: clamp(3rem, 6vw, 6rem);
+$h1-line-height: 1.167;
+$h1-weight: 300;
+
+$h2-size: clamp(2.5rem, 4vw, 3.75rem);
+$h2-line-height: 1.2;
+$h2-weight: 300;
+
+$h3-size: clamp(2rem, 3vw, 3rem);
+$h3-line-height: 1.167;
+$h3-weight: 400;
+
+$h4-size: clamp(1.75rem, 2.5vw, 2.125rem);
+$h4-line-height: 1.235;
+$h4-weight: 400;
+
+$h5-size: clamp(1.25rem, 2vw, 1.5rem);
+$h5-line-height: 1.334;
+$h5-weight: 400;
+
+$h6-size: clamp(1.125rem, 1.5vw, 1.25rem);
+$h6-line-height: 1.6;
+$h6-weight: 500;
+
+$text-small: 0.875rem;    
+$text-base: 1rem;        
+$text-large: 1.25rem;     
+
+$caption-size: clamp(0.6875rem, 0.65rem + 0.2vw, 0.75rem);  
+$overline-size: clamp(0.5625rem, 0.53rem + 0.2vw, 0.625rem); 
+
+$subtitle1-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem); 
+$subtitle1-line-height: 1.75;
+
+$subtitle2-size: clamp(0.8125rem, 0.78rem + 0.2vw, 0.875rem);
+$subtitle2-line-height: 1.57;
+
+$body1-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);      
+$body1-line-height: 1.5;
+
+$body2-size: clamp(0.8125rem, 0.78rem + 0.2vw, 0.875rem);  
+$body2-line-height: 1.43;
