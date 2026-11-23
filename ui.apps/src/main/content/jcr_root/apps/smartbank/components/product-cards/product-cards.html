@@ -34,7 +34,8 @@
                             </div>
                         </dl>
                         <div class="cmp-product-cards__action" data-sly-test="${product.buttonLink}">
-                            <a class="cmp-product-cards__link" href="${product.buttonLink @ context='uri'}">
+                            <a class="cmp-product-cards__link"
+                                href="${product.buttonLink @ extension='html', context='uri'}">
                                 ${product.buttonText || 'Learn More'}
                             </a>
                         </div>
