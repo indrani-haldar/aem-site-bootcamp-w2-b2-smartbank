@@ -1,0 +1,13 @@
+Hi Card Component
+
+<h2><p style="color:rgb(128, 0, 64)">Cosmetics Name: ${properties.cosmeticsName}</p></h2>
+<h2>Cosmetics Description:${properties.cosmeticsDescription}</h2>
+<img src="${properties.cosmeticsImageReference}" alt="Cosmetics Image" width="500" height="500"/>
+<h2>Cosmetics Brand:${properties.cosmeticsBrand}</h2>
+
+<h2>Cosmetic Price: ${properties.cosmeticsPrice}</h2>
+<h2>Cosmetic Quantity:${properties.cosmeticsQuantity}</h2>
+
+<div data-sly-use.temp="discount.js">
+     <h2>${temp}</h2>
+</div>

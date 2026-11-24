@@ -1,0 +1,62 @@
+.cmp-form {
+    width: 100%;
+}
+
+.cmp-form label,
+.cmp-form .cmp-form-text__label,
+.cmp-form-options__legend {
+    display: block;
+    margin-bottom: 0.375rem;
+    color: var(--color-ink);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.cmp-form input:not([type="checkbox"]):not([type="radio"]),
+.cmp-form select,
+.cmp-form textarea,
+.cmp-form-text__text,
+.cmp-form-text__textarea,
+.cmp-form-options__drop-down-field,
+.cmp-form-options__multi-drop-down-field {
+    display: block;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #bdcbd8;
+    border-radius: var(--radius-control);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 0.9375rem;
+
+    &:hover {
+        border-color: #8398aa;
+    }
+
+    &:focus {
+        border-color: var(--color-primary);
+        outline: 3px solid rgba(7, 86, 165, 0.15);
+        outline-offset: 0;
+    }
+}
+
+.cmp-form textarea,
+.cmp-form-text__textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+.cmp-form .cmp-form-text,
+.cmp-form .cmp-form-options {
+    margin-bottom: 1rem;
+}
+
+.cmp-form__required {
+    color: #b42318;
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .cmp-form {
+        max-width: 100%;
+    }
+}

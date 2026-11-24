@@ -1,0 +1,17 @@
+<sly data-sly-use.model="com.smartbank.core.models.SiteHeaderModel"
+     data-sly-use.shared="/apps/smartbank/components/smartbankassets/templates.html"
+     data-sly-call="${shared.load}"></sly>
+<header class="sb sb-header" data-sb-header>
+    <div class="sb-shell sb-header__inner">
+        <a class="sb-brand" href="${model.homeLink @ context='uri'}" aria-label="${model.brandName} home">
+            <img data-sly-test="${model.logo}" src="${model.logo @ context='uri'}" alt="" width="40" height="40"/>
+            <span data-sly-test="${!model.logo}" class="sb-brand__mark" aria-hidden="true">S</span>
+            <span>${model.brandName}</span>
+        </a>
+        <button type="button" class="sb-menu-toggle" data-sb-menu-toggle aria-expanded="true" aria-controls="${model.id}-nav">Menu <span aria-hidden="true">&#9776;</span></button>
+        <nav class="sb-header__nav" id="${model.id}-nav" aria-label="Main navigation">
+            <ul data-sly-list.item="${model.links}"><li><a href="${item.link @ context='uri'}">${item.label}</a></li></ul>
+            <a data-sly-test="${model.ctaLink && model.ctaLabel}" class="sb-button sb-button--small" href="${model.ctaLink @ context='uri'}">${model.ctaLabel}</a>
+        </nav>
+    </div>
+</header>

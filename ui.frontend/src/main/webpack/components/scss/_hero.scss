@@ -1,0 +1,135 @@
+@use "typography-mixins" as type;
+@use "button-mixins" as button;
+
+
+.cmp-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-8;
+    width: 100%;
+    box-sizing: border-box;
+    padding: $space-8 $space-4;
+    font-family: $font-family;
+    font-size: $text-base;
+    line-height: $font-height;
+    text-align: left;
+    color: $color-foreground;
+    background-color: $color-background;
+}
+
+.cmp-hero__image {
+    width: 100%;
+    margin: 0;
+    flex: 1 1 50%;
+}
+
+.cmp-hero__img {
+    display: block;
+    height: auto;
+    border-radius: $radius-card;
+    object-fit: cover;
+    width: 100%;
+    min-width: 20rem;
+}
+
+.cmp-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-4;
+    flex: 1 1 50%;
+    max-width: 720px;
+}
+
+.cmp-hero__title {
+    margin: 0;
+    @include type.h3;
+}
+  
+.cmp-hero__description {
+    margin: 0;
+    @include type.h6;
+}
+
+.cmp-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3;
+    margin-top: $space-2;
+}
+
+.cmp-hero__cta {
+    @include button-base;
+
+    &--primary {
+        color: $button-contained-foreground;
+        background-color: $color-link;
+
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+
+    &--secondary {
+        border-color: $button-outlined-border;
+        color: $button-outlined-foreground;
+        background-color: $button-outlined-background;
+
+        &:hover {
+            background-color: $button-outlined-hover-background;
+        }
+    }
+}
+
+.cmp-hero--center {
+    text-align: center;
+
+    .cmp-hero__content {
+        align-items: center;
+    }
+
+    .cmp-hero__actions {
+        justify-content: center;
+    }
+}
+
+.cmp-hero--dark {
+    color: $color-surface;
+    background-color: $color-foreground;
+
+    .cmp-hero__description {
+        color: $color-surface;
+    }
+
+    .cmp-hero__cta--primary {
+        color: $color-foreground;
+        background-color: $color-surface;
+
+        &:hover {
+            background-color: $color-background;
+        }
+    }
+
+    .cmp-hero__cta--secondary {
+        border-color: $color-surface;
+        color: $color-surface;
+        background-color: transparent;
+
+        &:hover {
+            color: $color-foreground;
+            background-color: $color-surface;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .cmp-hero {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: $space-8;
+        padding: $space-8;
+    }
+ 
+}

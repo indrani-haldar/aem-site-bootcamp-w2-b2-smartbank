@@ -40,15 +40,14 @@ public class HelloWorldModel {
     @Default(values="No resourceType")
     protected String resourceType;
 
-    @SlingObject
+    @SlingObject         
     private Resource currentResource;
     @SlingObject
     private ResourceResolver resourceResolver;
 
     private String message;
-
     @PostConstruct
-    protected void init() {
+    protected void init() {   
         PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
         String currentPagePath = Optional.ofNullable(pageManager)
                 .map(pm -> pm.getContainingPage(currentResource))

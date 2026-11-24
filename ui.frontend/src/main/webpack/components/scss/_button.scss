@@ -1,0 +1,49 @@
+// Base button
+.cmp-button {
+    @include button-base;
+}
+
+.cmp-button__text {
+    color: inherit;
+}
+
+.cmp-button__icon {
+    flex: 0 0 auto;
+}
+
+
+// Contained
+.contained {
+    .cmp-button {
+        border-color: var(--button-contained-background);
+        background: var(--button-contained-background);
+        color: var(--button-contained-foreground);
+
+        &:hover {
+            border-color: var(--button-contained-hover-background);
+            background: var(--button-contained-hover-background);
+            color: var(--button-contained-foreground);
+        }
+    }
+}
+
+
+// Outlined
+.outlined {
+    .cmp-button {
+        border-color: var(--button-outlined-border);
+        background: var(--button-outlined-background);
+        color: var(--button-outlined-foreground);
+
+        &:hover {
+            border-color: var(--button-contained-background);
+            background: var(--button-outlined-hover-background);
+            color: var(--button-outlined-foreground);
+        }
+    }
+}
+.rounded {
+    .cmp-button {
+        border-radius: var(--button-rounded-border-radius);
+    }
+}

@@ -1,0 +1,25 @@
+<section id="${resource.path}" class="cmp-accordion cmp-accordion--custom"
+    aria-labelledby="${resource.path}-heading">
+    <h2 class="cmp-accordion__heading" id="${resource.path}-heading">
+        ${properties.heading || 'Frequently asked questions'}
+    </h2>
+    <p class="cmp-accordion__description" data-sly-test="${properties.description}">
+        ${properties.description}
+    </p>
+
+    <sly data-sly-list.itemContainer="${resource.children}">
+        <sly data-sly-test="${itemContainer.name == 'items'}">
+            <div class="cmp-accordion__items" data-sly-list.item="${itemContainer.children}">
+                <details class="cmp-accordion__item" data-sly-test="${item.question && item.answer}">
+                    <summary class="cmp-accordion__button">
+                        <span class="cmp-accordion__title">${item.question}</span>
+                        <span class="cmp-accordion__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="cmp-accordion__panel">
+                        <p>${item.answer}</p>
+                    </div>
+                </details>
+            </div>   
+        </sly>
+    </sly>
+</section>

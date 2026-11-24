@@ -1,0 +1,58 @@
+@use "typography-mixins" as type;
+@use "button-mixins" as button;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+[class*="cmp-typography__h"] {
+  margin: 0 0 var(--space-3);
+  color: var(--color-ink);
+}
+
+h1,
+.cmp-typography__h1 {
+  @include type.h1;
+}
+
+h2,
+.cmp-typography__h2 {
+  @include type.h2;
+}
+
+h3,
+.cmp-typography__h3 {
+  @include type.h3;
+}
+
+h4,
+.cmp-typography__h4 {
+  @include type.h4;
+}
+
+h5,
+.cmp-typography__h5 {
+  @include type.h5;
+}
+
+h6,
+.cmp-typography__h6 {
+  @include type.h6;
+}
+
+.cmp-typography__subtitle1 {
+  @include type.subtitle1;
+}
+
+.cmp-typography__subtitle2 {
+  @include type.subtitle2;
+}
+
+.cmp-typography__body1 {
+  @include type.body1;
+}
+
+.cmp-typography__body2 {
+  @include type.body2;
+}

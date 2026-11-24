@@ -1,0 +1,34 @@
+.cmp-breadcrumb {
+    margin-bottom: 1.25rem;
+    color: var(--color-muted);
+    font-size: 0.875rem;
+}
+
+.cmp-breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cmp-breadcrumb__item:not(:last-child)::after {
+    margin-left: 0.5rem;
+    color: var(--color-muted);
+    content: "/";
+}
+
+.cmp-breadcrumb__item--active {
+    color: var(--color-ink);
+}
+
+.cmp-breadcrumb__item-link {
+    color: var(--color-muted);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--color-primary);
+        text-decoration: underline;
+    }
+}

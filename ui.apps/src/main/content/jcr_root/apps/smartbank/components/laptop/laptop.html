@@ -1,0 +1,17 @@
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"/>
+
+<div class="cmp-laptop"
+     data-sly-test.configured="${properties.laptopName || properties.laptopDescription || properties.laptopImageReference}">
+    <img class="cmp-laptop__image"
+         data-sly-test="${properties.laptopImageReference}"
+         src="${properties.laptopImageReference}"
+         alt="${properties.laptopName}"/>
+    <h2 class="cmp-laptop__name" data-sly-test="${properties.laptopName}">
+        ${properties.laptopName}
+    </h2>
+    <p class="cmp-laptop__description" data-sly-test="${properties.laptopDescription}">
+        ${properties.laptopDescription}
+    </p>
+</div>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!configured}"/>

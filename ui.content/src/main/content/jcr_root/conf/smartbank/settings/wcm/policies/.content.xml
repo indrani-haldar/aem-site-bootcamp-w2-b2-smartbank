@@ -241,7 +241,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:SmartBank - Content,/apps/smartbank/components/form/container]">
+                    components="[group:SmartBank - Content,/apps/smartbank/components/form/container,/apps/smartbank/components/custom-container-fluid]">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">

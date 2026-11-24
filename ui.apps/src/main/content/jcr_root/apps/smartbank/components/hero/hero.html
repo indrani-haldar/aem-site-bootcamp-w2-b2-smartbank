@@ -1,0 +1,13 @@
+<div class="cmp-hero cmp-hero--${properties.theme || 'light'} cmp-hero--${properties.alignment || 'left'}">
+    <div class="cmp-hero__image" data-sly-test="${properties.fileReference}">
+        <img class="cmp-hero__img" src="${properties.fileReference}" alt="${properties.title}"/>
+    </div>
+    <div class="cmp-hero__content">
+        <h1 class="cmp-hero__title" data-sly-test="${properties.title}">${properties.title}</h1>
+        <p class="cmp-hero__description" data-sly-test="${properties.description}">${properties.description}</p>
+        <div class="cmp-hero__actions" data-sly-test="${properties.ctaText && properties.ctaLink}">
+            <a class="cmp-hero__cta cmp-hero__cta--${properties.ctaType || 'primary'}"
+               href="${properties.ctaLink}">${properties.ctaText}</a>
+        </div>
+    </div>
+</div>

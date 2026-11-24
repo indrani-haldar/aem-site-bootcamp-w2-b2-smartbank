@@ -1,0 +1,25 @@
+#sb-home {
+    .cmp-hero {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #feature-product {
+        display: flex;
+        padding: 2rem;
+        width: 100%
+    }
+}
+
+ @media (max-width: $breakpoint-tablet) {
+    #sb-home .cmp-hero {
+        flex-flow: row wrap;
+
+    }
+}
+ @media (max-width: $breakpoint-mobile) {
+    #sb-home .cmp-hero {
+        flex-flow: row wrap;
+    }
+}

@@ -1,0 +1,31 @@
+#sb-products {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.7rem;
+
+  #filter-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    #search-container {}
+
+    #tab-container {
+      >.aem-Grid {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        >.button {
+          float: none;
+          width: auto;
+          margin-left: 0;
+          display: inline-flex;
+
+        }
+      }
+    }
+  }
+}
