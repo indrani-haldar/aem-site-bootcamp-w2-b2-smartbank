@@ -1,22 +1,25 @@
-<sly data-sly-use.faq="com.smartbank.core.models.FaqAccordionModel"/>
-
-<section id="${faq.id}" class="cmp-accordion cmp-accordion--custom"
-    aria-labelledby="${faq.id}-heading">
-    <h2 class="cmp-accordion__heading" id="${faq.id}-heading">${faq.heading}</h2>
-    <p class="cmp-accordion__description" data-sly-test="${faq.description}">
-        ${faq.description}
+<section id="${resource.path}" class="cmp-accordion cmp-accordion--custom"
+    aria-labelledby="${resource.path}-heading">
+    <h2 class="cmp-accordion__heading" id="${resource.path}-heading">
+        ${properties.heading || 'Frequently asked questions'}
+    </h2>
+    <p class="cmp-accordion__description" data-sly-test="${properties.description}">
+        ${properties.description}
     </p>
 
-    <div class="cmp-accordion__items" data-sly-list.item="${faq.items}">
-        <details class="cmp-accordion__item" id="${faq.id}-item-${itemList.index}">
-            <summary class="cmp-accordion__button"
-                aria-controls="${faq.id}-panel-${itemList.index}">
-                <span class="cmp-accordion__title">${item.question}</span>
-                <span class="cmp-accordion__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="cmp-accordion__panel" id="${faq.id}-panel-${itemList.index}">
-                <p>${item.answer}</p>
-            </div>
-        </details>
-    </div>
+    <sly data-sly-list.itemContainer="${resource.children}">
+        <sly data-sly-test="${itemContainer.name == 'items'}">
+            <div class="cmp-accordion__items" data-sly-list.item="${itemContainer.children}">
+                <details class="cmp-accordion__item" data-sly-test="${item.question && item.answer}">
+                    <summary class="cmp-accordion__button">
+                        <span class="cmp-accordion__title">${item.question}</span>
+                        <span class="cmp-accordion__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="cmp-accordion__panel">
+                        <p>${item.answer}</p>
+                    </div>
+                </details>
+            </div>   
+        </sly>
+    </sly>
 </section>
